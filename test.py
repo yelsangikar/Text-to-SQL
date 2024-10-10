@@ -22,6 +22,7 @@ def execute_sql_query(sql_query, server, database):
         # Create the connection string
         connection = pyodbc.connect(driver='ODBC Driver 17 for SQL Server',
                                     server=server,
+                                    Timeout=30,
                                     database=database,
                                     trusted_connection='yes')
 
