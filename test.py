@@ -90,7 +90,7 @@ def correct_sql_query(question, response, prompt):
 
     while error:
         # Execute the SQL query and check if it fails
-        query_result, rows, error_message = execute_sql_query(corrected_query,  os.getenv('server'), 'master')
+        query_result, rows, error_message = execute_sql_query(corrected_query, 'TKTHP-SN566\\SQLEXPRESS04', 'master')
 
         if error_message and "no results" not in error_message:
             # Display the SQL error
